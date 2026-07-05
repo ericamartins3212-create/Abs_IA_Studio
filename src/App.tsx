@@ -49,8 +49,8 @@ export default function App() {
         return 'sheets';
       }
     }
-    const saved = localStorage.getItem('abs_dashboard_mode');
-    return (saved as 'demo' | 'sheets') || 'sheets';
+    // Default to 'sheets' mode for a real data experience directly on page load
+    return 'sheets';
   });
   const [user, setUser] = useState<User | null>(null);
   const [accessToken, setAccessToken] = useState<string | null>(null);
