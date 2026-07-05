@@ -50,7 +50,7 @@ export default function App() {
       }
     }
     const saved = localStorage.getItem('abs_dashboard_mode');
-    return (saved as 'demo' | 'sheets') || 'demo';
+    return (saved as 'demo' | 'sheets') || 'sheets';
   });
   const [user, setUser] = useState<User | null>(null);
   const [accessToken, setAccessToken] = useState<string | null>(null);
@@ -65,7 +65,7 @@ export default function App() {
       const urlId = params.get('sheetId') || params.get('id') || params.get('fatoAbsId');
       if (urlId) return urlId;
     }
-    return localStorage.getItem('abs_dashboard_fato_abs_id') || '';
+    return localStorage.getItem('abs_dashboard_fato_abs_id') || '1--C5FsBOg9HGc-Nff59Qs7dRKgXBBmnZxBeusvHS15s';
   });
   const [dimNfcId, setDimNfcId] = useState(() => {
     if (typeof window !== 'undefined') {
@@ -73,7 +73,7 @@ export default function App() {
       const urlId = params.get('headcountId') || params.get('dimNfcId');
       if (urlId) return urlId;
     }
-    return localStorage.getItem('abs_dashboard_dim_nfc_id') || '';
+    return localStorage.getItem('abs_dashboard_dim_nfc_id') || '1--C5FsBOg9HGc-Nff59Qs7dRKgXBBmnZxBeusvHS15s';
   });
   const [useSameSpreadsheet, setUseSameSpreadsheet] = useState(() => {
     if (typeof window !== 'undefined') {
@@ -373,7 +373,6 @@ export default function App() {
                 id="toggle-sheets-mode"
                 onClick={() => {
                   setDataSource('sheets');
-                  if (!user) setNeedsAuth(true);
                 }}
                 className={`flex items-center gap-1.5 px-4 py-2 rounded-lg text-xs font-semibold transition-all cursor-pointer ${
                   dataSource === 'sheets'
