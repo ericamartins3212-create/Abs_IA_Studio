@@ -1,0 +1,6 @@
+{
+  "name": "Dashboard de Absenteísmo",
+  "description": "Dashboard para análise de absenteísmo, atestados, faltas e atrasos integrado com o Google Sheets.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

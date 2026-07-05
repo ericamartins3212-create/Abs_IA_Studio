@@ -1,0 +1,105 @@
+@import "tailwindcss";
+
+/* Official Google Sign-In Button styles */
+.gsi-material-button {
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  -webkit-appearance: none;
+  background-color: WHITE;
+  background-image: none;
+  border: 1px solid #dadce0;
+  -webkit-border-radius: 8px;
+  border-radius: 8px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  color: #3c4043;
+  cursor: pointer;
+  font-family: 'Google Sans', 'Roboto', arial, sans-serif;
+  font-size: 13px;
+  height: 40px;
+  letter-spacing: 0.25px;
+  outline: none;
+  overflow: hidden;
+  padding: 0 16px;
+  position: relative;
+  text-align: center;
+  transition: background-color .218s, border-color .218s, box-shadow .218s;
+  transition-property: background-color, border-color, box-shadow;
+  transition-duration: 0.218s, 0.218s, 0.218s;
+  transition-timing-function: ease, ease, ease;
+  transition-delay: 0s, 0s, 0s;
+  vertical-align: middle;
+  white-space: nowrap;
+  width: auto;
+  max-width: 400px;
+  min-width: min-content;
+}
+
+.gsi-material-button .gsi-material-button-icon {
+  height: 18px;
+  margin-right: 10px;
+  min-width: 18px;
+  width: 18px;
+}
+
+.gsi-material-button .gsi-material-button-content-wrapper {
+  -webkit-align-items: center;
+  align-items: center;
+  display: flex;
+  -webkit-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  height: 100%;
+  justify-content: space-between;
+  position: relative;
+  width: 100%;
+}
+
+.gsi-material-button .gsi-material-button-contents {
+  -webkit-flex-grow: 1;
+  flex-grow: 1;
+  font-weight: 500;
+  overflow: hidden;
+  text-align: left;
+  text-overflow: ellipsis;
+}
+
+.gsi-material-button .gsi-material-button-state {
+  -webkit-transition: opacity .218s;
+  transition: opacity .218s;
+  bottom: 0;
+  left: 0;
+  opacity: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.gsi-material-button:hover {
+  border-color: #d2e3fc;
+  background-color: #f8fafd;
+  -webkit-box-shadow: 0 1px 2px 0 rgba(60,64,67,0.30), 0 1px 3px 1px rgba(60,64,67,0.15);
+  box-shadow: 0 1px 2px 0 rgba(60,64,67,0.30), 0 1px 3px 1px rgba(60,64,67,0.15);
+}
+
+.gsi-material-button:hover .gsi-material-button-state {
+  background-color: #303030;
+  opacity: 0.04;
+}
+
+.gsi-material-button:focus {
+  border-color: #4285f4;
+  background-color: #f8fafd;
+}
+
+.gsi-material-button:focus .gsi-material-button-state {
+  background-color: #303030;
+  opacity: 0.12;
+}
+
+.gsi-material-button:active .gsi-material-button-state {
+  background-color: #303030;
+  opacity: 0.20;
+}
